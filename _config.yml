@@ -14,7 +14,7 @@ future: true
 # SNS settings
 RSS: false
 #weibo_username:     huxpro
-zhihu_username:     young-jo
+#zhihu_username:     young-jo
 github_username:    jioyoung
 #twitter_username:   huxpro
 #facebook_username:  huxpro
@@ -71,8 +71,8 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: 'UA-143412836-1'            # Format: UA-xxxxxx-xx
-ga_domain: yang-vera.github.io
+ga_track_id: 'UA-162782301-1'            # Format: UA-xxxxxx-xx
+ga_domain: jioyoung.github.io
 
 
 
