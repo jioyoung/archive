@@ -11,3 +11,7 @@ plt.show() # show figure
 ```python {cmd=true}
 print("asdfasdf")
 ```
+
+```math
+c^2 + a^2
+```
