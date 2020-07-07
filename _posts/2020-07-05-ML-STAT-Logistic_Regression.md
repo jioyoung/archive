@@ -4,7 +4,7 @@
 The logistic function is defined by $$y=\frac{1}{1+\exp(-z)} = \frac{\exp(z)}{1+\exp(z)}$$ 
 It is a common example of a sigmoid function (S shape function).
 
-## Binary Classification
+## Binary Classification
 There are two outputs for the binary classification problem: 0 and 1. Define $\mathbf{\beta} \equiv (\mathbf{w};b)$ and $\widehat{\mathbf{x}} \equiv (\mathbf{x};1)$. We have $\mathbf{w}^T\mathbf{x}+b = \beta^T \widehat{\mathbf{x}}$  The logistic model for the binary classification can be stated as 
 $$ \ln \frac{p(y=1|\mathbf{x})}{p(y=0|\mathbf{x})} = \mathbf{w}^T\mathbf{x}+b = \beta^T \widehat{\mathbf{x}}. $$
 where $ \frac{p(y=1|\mathbf{x})}{p(y=0|\mathbf{x})} $ is the odds of the default class. Odds, which often appear in the gambling game, are calculated as a ratio of the probability of the event divided by the probability of not the event. $ \ln \frac{p(y=1|\mathbf{x})}{p(y=0|\mathbf{x})} $ is referred as log odds or logit.
