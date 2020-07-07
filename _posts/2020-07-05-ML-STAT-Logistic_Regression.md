@@ -9,8 +9,8 @@ There are two outputs for the binary classification problem: 0 and 1. Define $\m
 $$ \ln \frac{p(y=1|\mathbf{x})}{p(y=0|\mathbf{x})} = \mathbf{w}^T\mathbf{x}+b = \beta^T \widehat{\mathbf{x}}. $$
 where $ \frac{p(y=1|\mathbf{x})}{p(y=0|\mathbf{x})} $ is the odds of the default class. Odds, which often appear in the gambling game, are calculated as a ratio of the probability of the event divided by the probability of not the event. $ \ln \frac{p(y=1|\mathbf{x})}{p(y=0|\mathbf{x})} $ is referred as log odds or logit.
 
-Since the sum of $p(y=1|\mathbf{x})$ and $p(y=0|\mathbf{x})$ is 1, then we have 
-$$ p(y=1|\mathbf{x}) = \frac{\exp(\mathbf{w}^T\mathbf{x}+b)}{1+\exp(\mathbf{w}^T\mathbf{x}+b)} = \frac{\exp(  \beta^T \widehat{\mathbf{x}}  )}{1+\exp(\beta^T \widehat{\mathbf{x}})}, \\ ~\\ p(y=0|\mathbf{x}) = \frac{1}{1+\exp(\mathbf{w}^T\mathbf{x}+b)}  = \frac{1}{1+\exp( \beta^T \widehat{\mathbf{x}} )}.$$
+Since the sum of $p(y=1\vert\mathbf{x})$ and $p(y=0\vert\mathbf{x})$ is 1, then we have 
+$$ p(y=1\vert\mathbf{x}) = \frac{\exp(\mathbf{w}^T\mathbf{x}+b)}{1+\exp(\mathbf{w}^T\mathbf{x}+b)} = \frac{\exp(  \beta^T \widehat{\mathbf{x}}  )}{1+\exp(\beta^T \widehat{\mathbf{x}})}, \\ ~\\ p(y=0\vert\mathbf{x}) = \frac{1}{1+\exp(\mathbf{w}^T\mathbf{x}+b)}  = \frac{1}{1+\exp( \beta^T \widehat{\mathbf{x}} )}.$$
 
 ### Learning the Logistic Model
 The coefficients of the logistic regression algorithm must be estimated from your training data. This is done using maximum-likelihood estimation. 
