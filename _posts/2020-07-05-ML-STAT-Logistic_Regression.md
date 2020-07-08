@@ -1,3 +1,16 @@
+---
+layout:     keynote
+title:      "Logistic Regression"
+subtitle:   "LR"
+date:       2020-05-16 12:00:00
+author:     "yang"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+tags:
+    - ML
+---
+
+
 # Logistic Regression
 > Logistic regression is named for the function used at the core of the method, the logistic function. It's an S-shaped curve that can take any real-valued number and map it into a value between 0 and 1, but never exactly at those limits. 
 
