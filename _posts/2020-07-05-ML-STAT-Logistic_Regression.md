@@ -1,13 +1,6 @@
 ---
 layout:     keynote
-title:      "Logistic Regression"
-subtitle:   "LR"
-date:       2020-05-16 12:00:00
-author:     "yang"
-header-img: "img/post-bg-2015.jpg"
-catalog: true
-tags:
-    - ML
+iframe:     "http://jioyoung.github.io/test/"
 ---
 
 
