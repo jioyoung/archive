@@ -5,7 +5,7 @@ subtitle:   "算法"
 date:       2020-05-16 12:00:00
 author:     "Yang"
 header-img: "img/post-bg-2015.jpg"
-catalog: leetcode
+catalog: true
 tags:
     - 力扣
 ---
