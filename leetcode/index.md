@@ -6,7 +6,7 @@ layout: page
     <div class="section">
         <ul class="artical-cate">
             <li><a href="/"><span>Blog</span></a></li>
-            <li class="on"><a href="/Leetcode"><span>Leetcode</span></a></li>
+            <li class="on"><a href="/leetcode"><span>Leetcode</span></a></li>
         </ul>
 
         <div class="cate-bar"><span id="cateBar"></span></div>
