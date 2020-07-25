@@ -1,27 +1,46 @@
 ---
 layout: page
+description: "我干了什么 究竟拿了时间换了什么"
 ---
 
-<div class="index-content leetcode">
-    <div class="section">
-        <ul class="artical-cate">
-            <li><a href="/"><span>Blog</span></a></li>
-            <li class="on"><a href="/leetcode"><span>Leetcode</span></a></li>
-        </ul>
-
-        <div class="cate-bar"><span id="cateBar"></span></div>
-
-        <ul class="artical-list">
-        {% for post in site.categories.leetcode %}
-            <li>
-                <h2>
-                    <a href="{{ post.url }}">{{ post.title }}</a>
-                </h2>
-                <div class="title-desc">{{ post.description }}</div>
-            </li>
-        {% endfor %}
-        </ul>
-    </div>
-    <div class="aside">
-    </div>
+{% for post in site.categories.leetcode %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
+        </h3>
+        {% endif %}
+        <div class="post-content-preview">
+            {% if post.lang == 'en' %}
+                {{ post.content | strip_html | truncate:300 }}
+            {% else %}
+                {{ post.content | strip_html | truncate:200 }}
+            {% endif %}
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
 </div>
+<hr>
+{% endfor %}
+
+<!-- Pager -->
+{% if site.categories.leetcode.total_pages > 1 %}
+<ul class="pager">
+    {% if site.categories.leetcode.previous_page %}
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+    </li>
+    {% endif %}
+    {% if site.categories.leetcode.next_page %}
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}

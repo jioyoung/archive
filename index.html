@@ -30,14 +30,14 @@ description: "我干了什么 究竟拿了时间换了什么"
 {% endfor %}
 
 <!-- Pager -->
-{% if paginator.total_pages > 1 %}
+{% if site.categories.blog.total_pages > 1 %}
 <ul class="pager">
-    {% if paginator.previous_page %}
+    {% if site.categories.blog.previous_page %}
     <li class="previous">
         <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
     </li>
     {% endif %}
-    {% if paginator.next_page %}
+    {% if site.categories.blog.next_page %}
     <li class="next">
         <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
     </li>
