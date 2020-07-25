@@ -1,6 +1,13 @@
 ---
-layout:     keynote
-iframe:     "http://jioyoung.github.io/test/"
+layout:     post
+title:      "Logistic Regression"
+subtitle:   "LR"
+date:       2020-05-16 12:00:00
+author:     "yang"
+header-img: "img/post-bg-2015.jpg"
+catalog: blog
+tags:
+    - 力扣
 ---
 
 
