@@ -23,8 +23,7 @@
                     <li>
                         <a href="{{ site.baseurl }}/">Blog</a>
                     </li>
-                    {% for post in site.categories.blog %}
-                    <!-- {% for page in site.pages %} -->
+                    {% for page in site.pages %}
                     {% if page.title and page.hide-in-nav != true %}
                     <li>
                         <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
