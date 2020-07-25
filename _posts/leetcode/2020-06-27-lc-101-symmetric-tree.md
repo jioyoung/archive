@@ -8,8 +8,11 @@ header-img: "img/post-bg-2015.jpg"
 catalog: true
 category: leetcode
 tags:
+    - leetcode
     - 力扣
 ---
+
+```python
 @lc app=leetcode id=101 lang=python
 
 [101] Symmetric Tree
@@ -18,10 +21,6 @@ https://leetcode.com/problems/symmetric-tree/description/
 
 algorithms
 Easy (44.51%)
-Likes:    2716
-Dislikes: 60
-Total Accepted:    475.4K
-Total Submissions: 1.1M
 Testcase Example:  '[1,2,2,3,4,4,3]'
 
 Given a binary tree, check whether it is a mirror of itself (ie, symmetric
@@ -63,6 +62,8 @@ class TreeNode(object):
         self.val = x
         self.left = None
         self.right = None
+```
+
 
 ```python
 class Solution(object):
