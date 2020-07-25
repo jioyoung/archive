@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      "算法题之leetcode-094-inorder-traversal"
+subtitle:   "算法"
+date:       2020-05-16 12:00:00
+author:     "yang"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+category: leetcode
+tags:
+    - 力扣
+---
+
 
 @lc app=leetcode id=94 lang=python
 

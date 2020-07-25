@@ -1,3 +1,17 @@
+---
+layout:     post
+title:      "算法题之leetcode-061-rotate-list"
+subtitle:   "算法"
+date:       2020-05-16 12:00:00
+author:     "yang"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+category: leetcode
+tags:
+    - 力扣
+---
+
+
 [61] Rotate List
 
 https://leetcode.com/problems/rotate-list/description/
