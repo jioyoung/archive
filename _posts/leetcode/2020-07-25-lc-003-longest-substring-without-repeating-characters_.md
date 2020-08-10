@@ -1,18 +1,19 @@
 ---
-layout:     post
-title:      "leetcode-003-longest-substring-without-repeating-chars"
-subtitle:   "算法"
-date:       2020-07-25 12:00:00
-author:     "yang"
-header-img: "img/post-bg-2015.jpg"
+layout: post
+title: leetcode-003-longest-substring-without-repeating-chars
+subtitle: 算法
+date: 2020-07-25T12:00:00.000Z
+author: yang
+header-img: img/post-bg-2015.jpg
 catalog: true
 category: leetcode
 tags:
     - leetcode
     - 力扣
----
-
-
+---  
+  
+  
+  
 ```python
 #
 # @lc app=leetcode id=3 lang=python
@@ -61,11 +62,12 @@ tags:
 # subsequence and not a substring.
 # 
 ```
-
-# Algorithm:
+  
+#  Algorithm:
+  
 1. use a dictionary to record each character and its index
 2. use a variable start to record the starting index of the current substring that has no repeated chars
-
+  
 ```python
 class Solution(object):
     def lengthOfLongestSubstring(self, s):
@@ -88,8 +90,8 @@ class Solution(object):
             usedChar[c] = i
         return maxLen
 ```
-
-```python {cmd="C:\\Users\\weira\\anaconda3\\python"}
+  
+```python
 print("asdf")
 
 import os
@@ -99,3 +101,11 @@ print(os.path.dirname(sys.executable))
 print(sys.version)
 
 ```
+
+```
+asdf
+C:\Users\weira\anaconda3
+3.7.6 (default, Jan  8 2020, 20:23:39) [MSC v.1916 64 bit (AMD64)]
+```
+
+  
