@@ -11,6 +11,8 @@ tags:
     - Algorithm
 ---
 
+# sklearn: random forester set up and fit
+## load packages
 ```python
 # load the common packages
 import pandas as pd
@@ -23,9 +25,9 @@ from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
 rcParams.update({'figure.autolayout': True})
+%matplotlib inline
 ```
 
-# sklearn: random forester set up and fit
 ```python
 
 # use get_dummies to convert categories into columns one hot encode
@@ -123,6 +125,19 @@ s.view()
 
 # h2o: random forester set up and fit
 
+## packages
+```python
+
+from sklearn.metrics import auc, roc_curve, classification_report
+
+import h2o
+from h2o.frame import H2OFrame
+from h2o.estimators.random_forest import H2ORandomForestEstimator
+from h2o.grid.grid_search import H2OGridSearch
+
+%matplotlib inline
+
+```
 
 ## Initialize H2O cluster
 ```python
