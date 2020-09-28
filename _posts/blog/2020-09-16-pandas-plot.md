@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "random forester of sklearn and h2o"
+title:      "plot"
 subtitle:   "random forester of sklearn and h2o"
 date:       2020-08-12 12:00:00
 author:     "yang"
@@ -28,7 +28,7 @@ rcParams.update({'figure.autolayout': True})
 %matplotlib inline
 ```
 
-# hist plot
+# hist plot arguments
 ```python
 hist_kws={'histtype': 'bar', 'edgecolor':'black', 'alpha': 0.2}
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(18, 6))
@@ -38,12 +38,12 @@ sns.distplot(data[data['converted'] == 1]['age'], label = 'converted 1',
            ax = ax[0], hist_kws = hist_kws)
 ax[0].set_title('Count Plot of Age', fontsize=16)
 ax[0].legend()
+ax[0].set_yscale('log')
 ax[1].plot(x, y, '.-')
 ax[1].set_title('title', fontsize=16)
 ax[1].set_xlabel('xlabel')
 ax[1].set_ylabel('ylabel')
 ax[1].grid(True)
-ax[0].set_yscale('log')
 plt.tight_layout()
 plt.show()
 ```
@@ -58,4 +58,13 @@ ax.set_ylabel('ylabel', fontsize=12)
 ax.legend(fontsize=12)
 plt.show()
 ```
-
+# arguments
+```python
+fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(18, 6))
+ax[0].legend()
+ax[0].set_yscale('log')
+ax[1].plot(x, y, '.-')
+ax[1].set_title('title', fontsize=16)
+ax[1].set_xlabel('xlabel')
+ax[1].set_ylabel('ylabel')
+```
