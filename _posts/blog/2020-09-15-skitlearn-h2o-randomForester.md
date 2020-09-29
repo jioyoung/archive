@@ -40,7 +40,7 @@ train, test = train_test_split(data_dummy, test_size = 0.34)
 
 # set random forester classifier
 # build the model
-rf = RandomForestClassifier(n_estimators=100, max_features=3, oob_score=True)
+rf = RandomForestClassifier(n_estimators=100, max_features=3, class_weight={0:xx, 1:yy}, oob_score=True)
 rf.fit(train.drop('label column', axis=1), train['label column'])
 ```
 
@@ -104,13 +104,33 @@ pdp_dataset.plot(title='continuous feature')
 plt.show()
 ```
 
+## roc auc of random forester sklearn
+```python
+train_fpr, train_tpr, _ = roc_curve(train['label'], rf.oob_decision_function_[:,1])
+test_fpr, test_tpr, _ = roc_curve(test['label'], rf.predict_proba(test.drop('laebl', axis=1))[:,1]) 
+train_auc = np.round(auc(train_fpr, train_tpr), 3)
+test_auc = np.round(auc(test_fpr, test_tpr), 3)
+
+fig, ax = plt.subplots(figsize=(8, 6))
+ax.plot(train_fpr, train_tpr, label='Train AUC: ' + str(train_auc))
+ax.plot(test_fpr, test_tpr, label='Test AUC: ' + str(test_auc))
+ax.set_xlabel('False Positive Rate', fontsize=12)
+ax.set_ylabel('True Positive Rate', fontsize=12)
+ax.legend(fontsize=12)
+plt.show()
+```
+
 ## build a simple decision tree and check the 2 or 3 most important segments
 ```python
 import graphviz
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.tree import export_graphviz
 from graphviz import Source
-  
+# path needs to be set in the windows environment
+import os
+os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz/bin/'
+
+
 tree = DecisionTreeClassifier( max_depth=2,class_weight={0:1, 1:10}, min_impurity_decrease = 0.001)
 tree.fit(train.drop(['label col and unnecessary cols'], axis=1), train['label col'])
   
