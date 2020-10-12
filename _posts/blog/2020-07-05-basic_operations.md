@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      "Basic Operations"
+subtitle:   "LR"
+date:       2020-05-16 12:00:00
+author:     "yang"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+category: blog
+tags:
+    - 力扣
+---
+
 # qcut
 ## 等分cdf，q=4是quartile： 0~25pertentile, 25~50 percentile....
 ```python

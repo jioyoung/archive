@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      "Grid Search"
+subtitle:   "LR"
+date:       2020-05-16 12:00:00
+author:     "yang"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+category: blog
+tags:
+    - 力扣
+---
+
 # Grid Search
 ```python
 from sklearn.model_selection import GridSearchCV

@@ -1,3 +1,16 @@
+---
+layout:     post
+title:      "skLearn RF"
+subtitle:   "sklearn"
+date:       2020-05-16 12:00:00
+author:     "yang"
+header-img: "img/post-bg-2015.jpg"
+catalog: true
+category: blog
+tags:
+    - 力扣
+---
+
 # packages
 ```python
 from sklearn.metrics import auc, roc_curve, classification_report
