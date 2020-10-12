@@ -37,3 +37,33 @@ $$  Gain(D, a) = Ent(D) - Ent(D|a)$$. The attribute by which the branch will be 
     3. can only be used for discrete attributes 
     4. does not consider the missing values
 
+
+
+```python
+
+import graphviz
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import export_graphviz
+from graphviz import Source
+import os
+os.environ["PATH"] += os.pathsep + 'C:/Program Files (x86)/Graphviz/bin/'
+tree = DecisionTreeClassifier(max_depth=4, min_samples_leaf=30, class_weight='balanced', min_impurity_decrease=0.001)
+
+
+
+tree.fit(data_mlDummy.drop('earlyQuit', axis=1), data_mlDummy.earlyQuit)
+
+
+
+treeDot = export_graphviz(tree, out_file=None, proportion=True,feature_names=data_mlDummy.drop('earlyQuit', axis=1).columns)
+
+
+graph = graphviz.Source(treeDot).view()
+
+
+from IPython.display import display
+with open("tree.dot") as f:
+    dot_graph = f.read()
+display(graphviz.Source(dot_graph))
+
+```
