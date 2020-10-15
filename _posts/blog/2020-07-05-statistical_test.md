@@ -43,3 +43,9 @@ Mexico                  0.05119         0.04949   0.165544
 Venezuela               0.04898         0.05034   0.573702
 '''
 ```
+
+```python
+ctr_val = data[data['test'] == 0]['revenue'].values
+exp_val = data[data['test'] == 1]['revenue'].values
+print(ttest_ind(ctr_val, exp_val, axis=0, equal_var=False))
+```

@@ -89,3 +89,14 @@ ax.set_yscale('log')
 ax.legend(fontsize=12)
 plt.show()
 ```
+
+```python
+# visualization
+fig, ax = plt.subplots(figsize=(12, 6))
+grouped.T.plot(kind='line', ax=ax)
+ax.set_xlabel('Billing Cycle', fontsize=12)
+ax.set_ylabel('Retention Rate', fontsize=12)
+ax.grid(True)
+plt.tight_layout()
+plt.show()
+```
